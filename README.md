@@ -1,7 +1,8 @@
 SecureMarshal
 =============
 
-A Ruby serialization format designed from the ground-up around security.
+A (vaporware) Ruby serialization format designed from the ground-up
+around security.
 
 ## Rationale
 
