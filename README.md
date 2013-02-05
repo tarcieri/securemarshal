@@ -38,6 +38,14 @@ SecureMarshal takes the following steps to improve security:
   on JRuby) to bypass the Ruby method protocol entirely, ensuring that
   attackers cannot execute code as part of the serialization process.
 
+* **No symbol creation allowed**: SecureMarshal avoids symbol creation
+  entirely, only allowing the deserialization of symbols which are already
+  known to the VM.
+
+* **Standardized format**: Marshal has often been discouraged as a
+  serialization format because it's subject to change. SecureMarshal specifies
+  a standard format for the serialization of Ruby objects.
+
 ## Installation
 
 Add this line to your application's Gemfile:
