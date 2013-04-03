@@ -27,6 +27,11 @@ compatible with the existing Marshal format.
 
 SecureMarshal takes the following steps to improve security:
 
+* **Data is parsed lazily as requested**: data sent via SecureMarshal is not
+  eagerly converted into an object graph. Instead, objects are created
+  whenever accessed by the program receiving the data. This lowers the
+  potential attack surface and prevents certain classes of algorithmic attacks.
+
 * **Only whitelisted classes are allowed**: SecureMarshal will not function
   on any class which is not contained in the whitelist. Classes which can
   be serialized must be explicitly added to the whitelist.
